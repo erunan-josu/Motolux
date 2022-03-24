@@ -12,10 +12,10 @@ import Dealer from '../components/Dealer'
 const Bike = () => {
   const path = useParams().id
   const [myBike, setMyBike] = useState(null)
-  const getBike = () => setMyBike(Data.filter((bike) => bike.model === path)[0])
+  /*  const getBike = () => setMyBike(Data.filter((bike) => bike.model === path)[0]) */
 
   useEffect(() => {
-    getBike()
+    setMyBike(Data.filter((bike) => bike.model === path)[0])
   }, [path])
   return (
     myBike && (
